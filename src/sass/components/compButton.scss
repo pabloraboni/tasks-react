@@ -19,11 +19,11 @@ button{
     
     @include mx-flex();
     @include mx-flex-center();
-    gap:20px;
+    gap:10px;
     padding: 0 20px;
     width: auto;
     min-width: 120px;
-    min-height: 50px;
+    min-height: 45px;
     border: 0;
     box-sizing: border-box;
     transition: .4s;

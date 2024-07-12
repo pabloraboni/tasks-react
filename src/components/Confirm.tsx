@@ -39,9 +39,6 @@ const Confirm = ({ children, onConfirm, onCancel }:Props) => {
   };
 
 
-
-
-
   return (
     <>
       {showConfirm && (

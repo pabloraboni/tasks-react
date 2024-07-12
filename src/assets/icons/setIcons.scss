@@ -10,8 +10,8 @@
     font-style: normal;
 }
 
-[class^="pr-icon-"],
-[class*=" pr-icon-"] {
+[class^="pr-icon-"]:before,
+[class*=" pr-icon-"]:before {
     font-family: 'icomoon' !important;
     font-style: normal;
     font-weight: normal;

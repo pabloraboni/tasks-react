@@ -38,10 +38,10 @@
         margin: 0;
         font-size: 1.5em;
         color: #333;
+        text-decoration: none;
         &.--negative{
             color: #b43d3d;
         }
-        text-decoration: none;
     }
 
     &.--alignleft{

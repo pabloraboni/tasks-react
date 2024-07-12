@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header/>
-      <div className="pr-container">        
+      <div className="pr-container --flex-1">        
         <Outlet />
       </div>
       <Footer/>

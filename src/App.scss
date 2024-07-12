@@ -10,7 +10,9 @@
   color: #333;
 }
 
-
+*{
+  box-sizing: border-box;
+}
 //resets
 html{
   overflow: auto;
@@ -18,6 +20,22 @@ html{
 body{
   margin: 0;
   overflow: auto;  
+  &::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #d4d4d4;
+    border-radius: 10px;
+    border: 5px solid transparent;
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
 }
 h1 {
   font-size: 1.4em;
@@ -42,31 +60,31 @@ a{
 header .active {
   &:before{
     content: "";
-    width:  20px;
+    width:  5px;
     height: 5px;
-    border-radius: 10px;
+    border-radius: 50%;
     position: absolute;
     bottom: -10px;
-    background: #333;
+    background: #fff;
+    transition: 0.2s;
   }
 }
 
 //Containers
 .pr-container__fixed{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   margin: 0;
-  overflow: auto;
+  @include mx-flex();
+  @include mx-flex-column();
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
   &::-webkit-scrollbar {
     width: 15px;
     height: 15px;
     background-color: #ffffff;
     border-radius: 4px;
   }
-
   &::-webkit-scrollbar-thumb {
     background-color: #d4d4d4;
     border-radius: 10px;

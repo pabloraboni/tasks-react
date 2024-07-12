@@ -1,0 +1,75 @@
+@import "../sass/importMixins.scss";
+
+.pr-list {
+    @include mx-flex();
+    @include mx-flex-column();
+    gap: 5px;
+}
+
+.pr-list__item {
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    @include mx-flex();
+    @include mx-flex-row();
+    @include mx-flex-align-center();
+    gap: 15px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    animation: slideInRight 0.5s forwards;
+    &:hover{
+        background: rgba($primary-color, 0.1);
+    }
+}
+
+.pr-item__title{
+    @include mx-flex();
+    @include mx-flex-row();
+    @include mx-flex-align-center();
+    gap:15px;
+    &:after{
+        content: "";
+        height: 2px;
+        width: 15px;
+        border-radius: 5px;
+        background: $primary-color;
+    }
+}
+
+.pr-item__difficulty {
+    @include mx-flex();
+    @include mx-flex-row();
+    @include mx-flex-align-center();
+    gap: 5px;
+    font-size: 0.8em;
+
+    span {
+        background: $primary-color;
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        @include mx-flex();
+        @include mx-flex-center();
+    }
+}
+
+.pr-noitems{
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    @include mx-flex();
+    @include mx-flex-row();
+    @include mx-flex-align-center();
+    gap: 15px;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
