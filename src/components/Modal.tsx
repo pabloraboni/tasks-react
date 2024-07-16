@@ -27,14 +27,14 @@ const Modal = ({ children, title, width, showActions, onConfirm, onCancel }: Pro
         setExiting(true);
     };
 
-    const confirm = (e: React.MouseEvent): void => {
+    const confirm = () => {
         executeCloseModal();
         setTimeout(() => {
             onConfirm && onConfirm();
         }, 500);
     };
 
-    const cancel = (e: React.MouseEvent): void => {
+    const cancel = () => {
         executeCloseModal();
         setTimeout(() => {
             onCancel && onCancel();

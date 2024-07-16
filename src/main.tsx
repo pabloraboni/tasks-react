@@ -23,7 +23,11 @@ const router = createBrowserRouter([
       },
     ]
   }
-])
+],
+{
+  basename: "/tasks-react"
+}
+)
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
