@@ -53,6 +53,20 @@
     }
 }
 
+.pr-item__actions{
+    flex:1;
+    @include mx-flex();
+    @include mx-flex-row();
+    @include mx-flex-align-center();
+    @include mx-flex-justify-end();
+    gap:20px;
+    a{
+        font-size: 1.3em;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
 .pr-noitems{
     padding: 20px;
     background: #f0f0f0;
